@@ -1,0 +1,54 @@
+The following are trader files for the RwG Addon Mosquito Series by [HG]RaVeN103. 
+This is more specifically for the Exile Easy Trader Mod System found at:
+https://github.com/redned70/Trader-Mod
+
+1. Add the MOSQUITO folder to the TRADERS folder in your MP mission.
+
+2. In the TRADERS folder find the CfgTraders.hpp file and add:
+   "Mosquito", to the class Exile_Trader_Aircraft section. See the example below:
+   
+   	class Exile_Trader_Aircraft
+	{
+		name = "AIRCRAFT";
+		showWeaponFilter = 0;
+		categories[] = 
+		{
+            "Mosquito",
+			"Choppers",
+			"RHSChoppers",
+			"A3unarmedChoppers",
+			"A3armedChoppers",
+			"CUPChoppers",
+			"CUPPlanes",
+			"Planes",
+			"A3Planes",
+			"RHSPlanes"
+		};
+	};
+	
+3. Find and open the config.cpp file in your MP Mission folder and add:
+   
+   #include "TRADERS\MOSQUITO\ItemListMOSQUITO.hpp"
+   
+   to the class CfgExileArsenal section.
+   
+4. Also in the config.cpp file add:
+
+   #include "TRADERS\MOSQUITO\TraderCategoriesMOSQUITO.hpp"
+   
+   to the class CfgTraderCategories section.
+   
+Also I have added the Mosquito to the XM8. I use Infistars version, see below:
+
+class customapp_5 {
+	submenu = 0;
+	toggleable = 0;
+	text = "Deploy Gyro";
+	tooltip = "Deploys a gyro right infront of you, once per life!";
+	fnc = "['RwG_Mozzie_Carl_Exile', '', 0, 0, false, true, false] call apps_fnc_deploy;"; // [class, itemcost (empty '' - no item cost), poptabs from bank, respect, has to be bambi, can repack, once per life?]
+	pic = "\A3\air_f\Heli_Light_01\Data\UI\Heli_Light_01_CA.paa";
+};
+
+I simply replaced one of the donation apps with the above.  But I would recomend a better image for the app.
+
+**All credit for the Mosquito goes to [HG]RaVeN103**
