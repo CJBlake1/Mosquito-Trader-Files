@@ -1,6 +1,6 @@
 The following are trader files for the RwG Addon Mosquito Series by [HG]RaVeN103. 
 This is more specifically for the Exile Easy Trader Mod System found at:
-https://github.com/redned70/Trader-Mod
+https://github.com/redned70/Trader-Mod for an ArmA 3 Exile Server.
 
 1. Add the MOSQUITO folder to the TRADERS folder in your MP mission.
 
